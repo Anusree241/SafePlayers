@@ -1,0 +1,12 @@
+export const validEmail = 'anusree.e+eorgadmin@tezo.com';
+export const validPassword = '@nuUr333';
+export const invalidPassword = 'fvwdeohil';
+export const invalidEmail = 'anusree.e+eorgadmin';
+export const validParentName = 'anusree';
+export const validParentEmail = 'anusree.e+eeeeppp@tezo.com';
+export const parentName = 'anusree';
+export const parentEmail = 'anusree.e+eeeeppp@tezo.com';
+export const invalidParentName= 'anusree.e+eorg';
+export const invalidParentEmail= 'anusree.e+eorg';
+export const searchData = 'anusree.e+eeeparent@tezo.com';
+export const invalidSearch = 'anu';
