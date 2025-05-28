@@ -3,7 +3,11 @@
   "name": "script",
 =======
   "name": "safeplayers",
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 29a6d2ab26d1b0f6f982d91c2f4c52dd363c81cc
+>>>>>>> 0a25a54 (ClubContact Invite)
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {},
@@ -17,6 +21,10 @@
     "@types/node": "^22.15.21"
 =======
     "@types/node": "^22.15.19"
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 29a6d2ab26d1b0f6f982d91c2f4c52dd363c81cc
+>>>>>>> 0a25a54 (ClubContact Invite)
   }
 }
