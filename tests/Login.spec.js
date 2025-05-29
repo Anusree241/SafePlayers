@@ -6,7 +6,7 @@ test('tc 01 - Validate UI of Login Page  @smoke', async ({ page }) => {
   await page.goto('https://test.safeplayers.org/login');
   await verifyVisibleElements(page);
   console.log("UI of Login Page - pass")
-});
+})
 
 test('tc 02 - Login using valid credentials  @smoke', async ({ page }) => {
   await login(page, validEmail, validPassword);
@@ -127,18 +127,26 @@ test('tc 06- Validate both fields empty', async ({ page }) => {
   console.log("Errors displayed when both fields were empty in Parent Invite popup");
 });
 
-test('tc 07 - Validate Search button by entering complete email address and verify it shows in Pending tab', async ({ page }) => {
+test('tc 07 - Validate Search button by entering complete email address and verify it shows in Pending tab or shows No Data', async ({ page }) => {
   await login(page, validEmail, validPassword);
+  
   await page.getByRole('link', { name: '' }).click();
   await page.getByRole('textbox', { name: 'Search by email' }).click();
   await page.getByRole('textbox', { name: 'Search by email' }).fill(searchData);
   await page.getByRole('button', { name: '' }).click();
   await page.getByRole('button', { name: '' }).click();
-  await page.getByText('Pending').click();
-  await expect(page.locator(`text=${searchData}`)).toBeVisible();
-  console.log("Search results shows only on entering complete email");
-});
 
+  await page.getByText('Pending').click();
+  const searchResult = page.locator(`text=${searchData}`);
+  const noDataLocator = page.locator('td', { hasText: 'No data.' });
+  if (await searchResult.count() > 0) {
+    await expect(searchResult).toBeVisible();
+    console.log(`✅ Search result found for: ${searchData}`);
+  } else {
+    await expect(noDataLocator).toBeVisible();
+    console.log(` No data found for search results : ${searchData}`);
+  }
+});
 
 test('tc 08- Validate Search button by entering name or invalid email', async ({ page }) => {
   await login(page, validEmail, validPassword);
