@@ -1,13 +1,20 @@
 {
   "name": "safeplayers",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "",
+=======
+>>>>>>> 29a6d2ab26d1b0f6f982d91c2f4c52dd363c81cc
   "main": "index.js",
   "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
   "type": "commonjs",
+=======
+  "description": "",
+>>>>>>> 29a6d2ab26d1b0f6f982d91c2f4c52dd363c81cc
   "devDependencies": {
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.19"
