@@ -488,22 +488,6 @@ test('Re-invite club contact to different club', async () => {
     await clickButton(page, 'Close');
     console.log("Club contact is not re-invited and user is on club contact page");
     console.log("club contact is already invited to club : ", reinviteDiffContactData.club1);
-
-    // Verify if the invite is present in invites tab
-    const allRows = await getRowData(page);
-    
-    const previousRow = {
-        name: reinviteDiffContactData.name,
-        email: reinviteDiffContactData.email,
-        club: reinviteDiffContactData.club1,
-        
-      }
-      console.log(previousRow)
-    const isMatchFound4 = allRows.some(row =>
-        Object.entries(previousRow).every(([key, val]) => row[key] === val)
-    );
-    console.log(isMatchFound4 ? 'Previous Invite present in Invites tab' : 'Error - Previous invite is not present in Invites tab');
-    
   }else{
     const allRows = await getRowData(page);
     const today = currentDate();
@@ -553,6 +537,7 @@ test('Re-invite club contact to different club', async () => {
     status: 'Pending'
     };
     console.log(expectedRow);
+    console.log(allRows);
     const isMatchFound3 = allRows.some(row =>
         Object.entries(expectedRow).every(([key, val]) => row[key] === val)
       );

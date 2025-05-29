@@ -13,33 +13,33 @@ export const invalidInputData = {
 
 // Credentials for inviting new club contact
 export const inviteContactData = {
-      email: "srujana@gmail.com",
-      name: "Sreeja",  
+      email: "sangeetha@gmail.com",
+      name: "Sangeetha",  
       club:  "clubs",
       clubTitle: "Parent"
   };
 
 // Credentials for re inviting new club contact to same club
 export const reinviteContactData = {
-    email: "navya@gmail.com",
-    name: "Navya",
+    email: "niya@gmail.com",
+    name: "Niya",
     club:  "clubs",
     clubTitle: "Parent"
 };
 
 // Credentials for cancelling re invite of new club contact
 export const cancelreinviteContactData = {
-    email: "prem@gmail.com",
-    name: "piyush",
+    email: "preetham@gmail.com",
+    name: "Preetham",
     club:  "clubs",
     clubTitle: "Parent"
 };
 
 // Credentials for re inviting new club contact to different club
 export const reinviteDiffContactData = {
-    email: "ramu.p@gmail.com",
-    name: "Raghu",
+    email: "mitra.p@gmail.com",
+    name: "Mitra",
     club1:  "test new clubss",
-    club2: "clubzz",
+    club2: "tstcb",
     clubTitle: "Parent"
 };
