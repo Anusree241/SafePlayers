@@ -32,7 +32,7 @@ test('tc2 verify the UI of "Add season" popup', async ({ page }) => {
 
   await page.getByRole('link', { name: '' }).click();
   await page.getByRole('button', { name: 'Add Seasons' }).click();
-  await expect(page.getByRole('heading', { name: 'Add Seasons' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Add a Season' })).toBeVisible();
   await expect(page.getByRole('textbox', { name: 'Season Name' })).toBeVisible();
   await expect(page.getByRole('textbox', { name: 'Season Start Date' })).toBeVisible();
   await expect(page.getByRole('textbox', { name: 'Season End Date' })).toBeVisible();
@@ -486,7 +486,7 @@ const today = new Date();
 
   await page.getByRole('button', { name: 'Submit' }).click();
   await page.getByRole('button', { name: 'Cancel' }).click();
-  await expect(page.getByRole('heading', { name: 'Add Seasons' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Add a Season' })).toBeVisible();
 });
 
 test('Verify the fuctionality of (X) icon  in create season popup', async ({ page }) => {
@@ -551,6 +551,8 @@ const today = new Date();
   // Select End Date
   await page.getByRole('textbox', { name: 'Season End Date' }).click();
   await clickEnabledDate(page,endDay);
+
+
 
   // Select Enrollment Date
   await page.getByRole('textbox', { name: 'Season Enrollment Date' }).click();
