@@ -1,5 +1,25 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+<<<<<<< HEAD
+export default defineConfig({
+  testDir: './tests',
+  fullyParallel: true,
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 0,
+  reporter: 'html',
+  timeout: 0,
+  workers: process.env.CI ? 1 : undefined,
+ 
+  expect: {
+    timeout: 0, // ✅ 10 seconds for all expect() calls
+  },
+ 
+  use: {
+    trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+  },
+ 
+=======
 
 /**
  * Read environment variables from file.
@@ -39,21 +59,32 @@ export default defineConfig({
   },
 
   /* Configure projects for major browsers */
+>>>>>>> 29a6d2ab26d1b0f6f982d91c2f4c52dd363c81cc
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
+<<<<<<< HEAD
+=======
 
+>>>>>>> 29a6d2ab26d1b0f6f982d91c2f4c52dd363c81cc
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
+<<<<<<< HEAD
+=======
 
+>>>>>>> 29a6d2ab26d1b0f6f982d91c2f4c52dd363c81cc
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
+<<<<<<< HEAD
+  ],
+});
+=======
 
     /* Test against mobile viewports. */
     // {
@@ -84,3 +115,4 @@ export default defineConfig({
   // },
 });
 
+>>>>>>> 29a6d2ab26d1b0f6f982d91c2f4c52dd363c81cc
